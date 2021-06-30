@@ -56,7 +56,7 @@ for i  in range(num):
 
 # 5. Reverse a given number and return true if it is the same as the original number.
 
-num=12325
+num=int(input("Enter a number:\n"))
 list1=list()
 list_reversed=list()
 
@@ -80,5 +80,4 @@ for i in range(len(list_reversed)):
 if list1==list_reversed:
     print("the reverse of the number is the same as the number")
 else:
-    print("the reverse of the number is different as the number")
-
+    prin
