@@ -1,1 +1,84 @@
+# 1. Given two integer numbers return their product. If the product is greater than 1000, then return their sum.
+int1=10
+int2=12
+def Func(int1, int2):
+    product=int2*int2
+    if product > 1000:
+        return int1+int2
+    else:
+        return product
+int3 = Func(int1, int2)
+print(int3)
+
+
+
+# 2.1. Given a string, display only those characters which are present at an prime index number.
+value = input("Please enter a string:\n")
+for index in range(2, len(value)):
+    for i in range(2, index):
+        remainder = index % i
+        if remainder != 0:
+            print("Value at even index {} is {}".format(index, value[index]))
+            break
+        else:
+            break
+            
+ # 2.2 Given a string, display only those characters which are present at an odd index number.
+value = input("Please enter a string:\n")
+for index in range(2, len(value)):
+    remainder = index % 2
+    if remainder != 0:
+        print("Value at odd index {} is {}".format(index, value[index]))
+    else:
+        continue
+
+# 3. Given a list of numbers, Iterate it and print only those numbers which are divisible by 5.
+my_list=[5,10,23,27,30,50,51,98,125,137]
+
+for index in range(len(my_list)):
+    remainder= my_list[index] % 5
+    if remainder==0:
+        print(my_list[index])
+
+#4. Given a number count the total number of digits in a number.
+
+num=123456
+sum_of_digits=0
+for i  in range(num):
+    digit=num%10
+    num=num//10
+    sum_of_digits+=digit
+    if num==0:
+        print("the sum of no {} is {}".format(num, sum_of_digits))
+        break
+
+
+
+# 5. Reverse a given number and return true if it is the same as the original number.
+
+num=12325
+list1=list()
+list_reversed=list()
+
+for i  in range(num):
+    digit=num%10
+    list_reversed.append(digit)
+    num = num // 10
+    if num==0:
+        break
+
+decrement=0
+lenght=len(list_reversed)-1
+
+for i in range(len(list_reversed)):
+    list1.append(list_reversed[lenght])
+    lenght-=1
+    decrement+=1
+    if i==4:
+        break
+
+if list1==list_reversed:
+    print("the reverse of the number is the same as the number")
+else:
+    print("the reverse of the number is different as the number")
 
